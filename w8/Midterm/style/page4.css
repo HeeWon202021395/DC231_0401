@@ -1,0 +1,333 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  /* 이거 다시봐야함 */
+  max-width: 1328px;
+  margin-inline: auto;
+  padding-inline: 64px;
+}
+
+.wrapper {
+  padding-block: 48px;
+  /* 큰 덩어리 간격들 */
+}
+
+.topNav .wrapper {
+  min-height: 30px;
+  padding: 8px 32px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 12px;
+  font-family: "PT Sans", sans-serif;
+}
+.topNav__menus {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.nav {
+  background-color: rgb(210, 196, 139);
+  container-type: inline-size;
+  container-name: nav;
+}
+.nav .wrapper {
+  min-height: 60px;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "PT Sans", sans-serif;
+}
+.nav__logo {
+  height: 36px;
+}
+.nav__menus {
+  display: flex;
+  gap: 36px;
+  align-items: baseline;
+  /* 이건 다시 확인해보기 */
+}
+.nav__menu {
+  color: black;
+  height: 20px;
+  text-decoration: none;
+}
+.nav__menu > a {
+  color: black;
+  text-decoration: none;
+}
+.nav .lt680px {
+  display: none;
+}
+@container nav (width < 42.5rem) {
+  .nav__menus {
+    display: none;
+  }
+  .nav .lt680px {
+    display: unset;
+  }
+}
+
+.video__wrapper {
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  padding-block: 12px;
+  margin-bottom: 16px;
+  margin-top: 8px;
+  color: #614a23;
+}
+.video__media {
+  display: flex;
+  gap: 16px;
+  background-color: none;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+.slider {
+  width: 1328px;
+  height: 540px;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  margin-top: -20px;
+}
+.slider .wrapper .imgs {
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+}
+.slider .wrapper .imgs img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slider input[type=radio] {
+  display: none;
+}
+
+ul.imgs {
+  padding: 0;
+  margin: 0;
+}
+
+ul.imgs li {
+  position: absolute;
+  opacity: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition-delay: 0.9s;
+}
+
+.bullets {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25px;
+  z-index: 2;
+}
+
+.bullets label {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.55);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.slider input[type=radio]:nth-child(1):checked ~ .bullets > label:nth-child(1) {
+  background-color: #fff;
+}
+
+.slider input[type=radio]:nth-child(2):checked ~ .bullets > label:nth-child(2) {
+  background-color: #fff;
+}
+
+.slider input[type=radio]:nth-child(3):checked ~ .bullets > label:nth-child(3) {
+  background-color: #fff;
+}
+
+.slider input[type=radio]:nth-child(4):checked ~ .bullets > label:nth-child(4) {
+  background-color: #fff;
+}
+
+.slider input[type=radio]:nth-child(1):checked ~ ul.imgs > li:nth-child(1) {
+  opacity: 1;
+  transition: 1s;
+  z-index: 1;
+}
+
+.slider input[type=radio]:nth-child(2):checked ~ ul.imgs > li:nth-child(2) {
+  opacity: 1;
+  transition: 1s;
+  z-index: 1;
+}
+
+.slider input[type=radio]:nth-child(3):checked ~ ul.imgs > li:nth-child(3) {
+  opacity: 1;
+  transition: 1s;
+  z-index: 1;
+}
+
+.slider input[type=radio]:nth-child(4):checked ~ ul.imgs > li:nth-child(4) {
+  opacity: 1;
+  transition: 1s;
+  z-index: 1;
+}
+
+#card2 {
+  background-color: rgb(255, 246, 234);
+}
+#card2 .container {
+  max-height: 365px;
+}
+#card2 .product {
+  text-decoration-line: none;
+}
+#card2 .product__name {
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  padding-block: 4px;
+  color: #614a23;
+}
+#card2 .product__price {
+  text-align: center;
+  font-size: 12px;
+  padding-block: 4px;
+  color: #614a23;
+}
+#card2 .product img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#card2 .products__wrapper {
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  padding-block: 12px;
+  margin-bottom: 12px;
+  color: #614a23;
+}
+#card2 .products__list {
+  display: flex;
+  gap: 16px;
+  justify-content: space-evenly;
+  aspect-ratio: 16/9;
+  background-color: none;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+#card1 {
+  background-color: cornsilk;
+}
+#card1 .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+#card1 .wrapper > * {
+  flex: 1;
+}
+#card1 .wrapper .review__media {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+#card1 .wrapper .review__media img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+#card1 .wrapper .review__button {
+  display: inline;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: rgb(255, 255, 255);
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 2px solid #614a23;
+  color: #614a23;
+  font-weight: 700;
+  text-align: center;
+}
+#card1 .wrapper p {
+  max-width: 60ch;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-family: "PT Sans", sans-serif;
+}
+#card1 .wrapper .h_font {
+  font-family: "PT Sans", sans-serif;
+  line-height: 50px;
+  margin-top: 20px;
+  color: #614a23;
+}
+@media (width < 1020px) {
+  #card1 .wrapper {
+    display: block;
+    text-align: center;
+  }
+  #card1 .wrapper p {
+    margin-inline: auto;
+  }
+  .review #card1 .wrapper__text__buttonWrapper {
+    margin-inline: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer {
+  background-color: #614a23;
+  color: white;
+  font-size: 14px;
+  container-type: inline-size;
+  container-name: footer;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+.footer li {
+  list-style: none;
+}
+.footer svg {
+  fill: white;
+}
+.footer .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+.footer h2 {
+  font-size: 18px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+.footer li {
+  margin-bottom: 8px;
+}
+.footer__extLinkWrap {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+@container footer (width < 710px) {
+  .footer .wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}/*# sourceMappingURL=page4.css.map */
