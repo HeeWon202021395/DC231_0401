@@ -92,60 +92,6 @@
   margin-bottom: 48px;
 }
 
-.slider {
-  width: 1328px;
-  height: 540px;
-  position: relative;
-  margin: 0 auto;
-  margin-bottom: 12px;
-  margin-top: -20px;
-}
-.slider .wrapper .imgs {
-  background-color: rgb(0, 0, 0);
-  overflow: hidden;
-}
-.slider .wrapper .imgs img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.slider input[type=radio] {
-  display: none;
-}
-
-ul.imgs {
-  padding: 0;
-  margin: 0;
-}
-
-ul.imgs li {
-  position: absolute;
-  opacity: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  transition-delay: 0.9s;
-}
-
-.bullets {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 25px;
-  z-index: 2;
-}
-
-.bullets label {
-  display: inline-block;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.55);
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
-}
-
 .slider input[type=radio]:nth-child(1):checked ~ .bullets > label:nth-child(1) {
   background-color: #fff;
 }
@@ -212,6 +158,10 @@ ul.imgs li {
   -o-object-fit: cover;
      object-fit: cover;
 }
+#card2 .products {
+  container-type: inline-size;
+  container-name: container-flex;
+}
 #card2 .products__wrapper {
   text-align: center;
   font-weight: 700;
@@ -222,20 +172,21 @@ ul.imgs li {
 }
 #card2 .products__list {
   display: flex;
-  gap: 8px;
+  gap: 16px;
   justify-content: space-evenly;
   aspect-ratio: 16/9;
   background-color: none;
   overflow: hidden;
   margin-bottom: 0px;
 }
+@container container-flex (min-width: 700px) {
+  #card2 .card-product {
+    max-width: calc((100% - 32px) / 3);
+  }
+}
 
 #card1 {
   background-color: cornsilk;
-}
-#card1 a {
-  text-decoration: none;
-  color: #614a23;
 }
 #card1 .wrapper {
   display: flex;
@@ -334,4 +285,4 @@ ul.imgs li {
   .footer .wrapper {
     grid-template-columns: 1fr 1fr;
   }
-}/*# sourceMappingURL=page4.css.map */
+}/*# sourceMappingURL=page test.css.map */
