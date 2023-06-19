@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="style/survive.css"
+    />
+    <script
+      src="script/progressBar.js"
+      defer
+    ></script>
+    <script
+      src="script/noHistoryScrollReactBtn.js"
+      defer
+    ></script>
+    <title>
+      무인도에서 살아남기 - Survive on a Deserted
+      Island
+    </title>
+  </head>
+  <body>
+    <!-- <header>
+      <div class="wrapper">
+      </div>
+    </header> -->
+    <div class="stickyWrapper">
+      <main>
+        <section id="section1">
+          <div class="cover-wrap">
+            <div class="cover-image">
+              <img src="/w15/final/stp2/img/island2.jpg" alt=""/>
+            </div>
+            <div class="cover-text">
+              <h3><span style ="color: rgb(255, 38, 0)">'3의 법칙'</span></h3>
+             <p>모든 생존에서 기본 법칙은 '3의 법칙'이다.</p>
+             <p>인간은 공기 없이 3분, 온도 없이 3시간, 물 없이 3일, 식량 없이 3주를 버틴다.</p>
+             <p>실제로는 이보다 더 오래 버틸 수 있지만 어느 정도 수준의 활동량을 유지한다는 조건에 따르면 이 정도가 한계라고 보면 된다.</p>
+             <p>무인도에 표류한다고 가정하면 보통 물을 먼저 구해야 한다고 생각하지만 실제로는 위의 법칙에 따라 물보다 거주지가 먼저 필요하다.</p> 
+             <p>거창한 오두막집 같은 것이 필요하다는 뜻이 아니라 동굴이나 간단한 천막, 바람을 막아 주는 바위 등 전반적으로 체온을 유지할 수 있는 조건을 갖추어야 한다는 것을 의미한다.</p>
+
+             <p>간단하게 거처를 마련했다면 물, 식량 순서로 조달하면 된다.</p>
+
+             <p>주변 환경, 남은 체력, 식량 등 여러 가지 여건을 고려해 무엇이 필요한지 우선순위를 정하고 효율적으로 움직이자.</p>
+
+            </p>
+            </div>
+          </div>
+          <!-- <div class="wrapper">       
+          </div> -->
+        </section>
+        <section id="section2">
+          <div class="wrapper">
+            <h2><span style ="color: rgb(24, 186, 9)">STEP1. 거처 (셸터) 짓기</span></h2>
+            <p>
+              <p>아직 해가 떠 있고, 젖지 않은 상태라는 전제하에 바람을 피할 수 있는 장소를 찾아보아라.</p>
+              <p>탐색 결과, 괜찮아 보이는 곳이 3 군데 있다. 어디에 거처를 마련하는 것이 좋을까?</p>
+              <!-- 카드시작 -->
+            <div id="section1" class="section">
+              <div class="container">
+                <div class="wrapper">
+                  <div class="card">
+                    <img
+                      class="card__img"
+                      src="img/ocean_view.jpg"
+                    />
+                    <div class="card__text">
+                      <h3>바다가 잘 보이는 바다 앞 오션뷰</h3>
+                      <p>
+                        영원히 무인도에서 살 것도 아니고, 그래도 바다를 보면서 있어야 마음이 평온해지지 않을까?
+                      </p>
+                    </div>
+                    <div class="card__buttons">
+                      <div class="button">
+                        <button onclick="alert('해안가나 바다는 바람이 정말 거세다. 섬에서는 바람이 불지 않는 곳을 찾는 것이 중요하다. 위험하다!');">선택하기</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img
+                      class="card__img"
+                      src="img/ground.jpg"
+                    />
+                    <div class="card__text">
+                      <h3>풀이 자라지 않는 평평한 평지</h3>
+                      <p>
+                        역시 집은 평지에 지어야지! 땅에 아무것도 없어 벌레 걱정도 하지 않아도 되지 않을까?
+                      </p>
+                    </div>
+                    <div class="card__buttons">
+                      <div class="button">
+                        <button onclick="alert('풀이 자라지 않는 것은 그 자리에 물이 찬다는 뜻이다. 조수간만의 차이를 주의해라. 위험하다!');">선택하기</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img
+                      class="card__img"
+                      src="img/cave.jpg"
+                    />
+                    <div class="card__text">
+                      <h3>안전해 보이는 곳에 위치한 동굴</h3>
+                      <p>
+                        무인도지만 어떤 일이 일어날지 모르는데, 내 몸 하나는 잘 숨겨야 하지 않을까?
+                      </p>
+                    </div>
+                    <div class="card__buttons">
+                      <div class="button">
+                        <button onclick="alert('비바람을 피할 수 있는 곳은 거처로서 적합하다. 동굴의 경우 그나마 바람이 들어오는 곳만 막으면 되니 편한 편이다. 적합하다!');">선택하기</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 카드 끝 -->
+          </div>
+        </section>
+        <section id="section3">
+          <div class="wrapper">
+            <h2><span style ="color: rgb(24, 186, 9)">STEP 2. 불 피우기</span></h2>
+            <p>
+              <p>정신 없이 거처를 마련하면 배도 고프고 지칠 수가 있다. 얼른 불을 피우는 것이 좋다. 불을 비우기 위해 도움이 되는 것들은 다음과 같다.</p>
+              <ul>
+                <li>
+                    <p><span style ="color: rgb(186, 148, 9); font-weight: 700;">마른 땔감</span></p>
+                    <p>통나무는 크고 타는 속도가 느리기 때문에 오랜 시간 불을 때는데 쓰인다. 다만 불을 지핀다고 바로 불이 붙지 않으며 특히 물을 잔뜩 머금은 싱싱한 장작은 더욱 심하다. </p>
+                    <p>이 때문에 장작은 필요할 때 갓 베어낸 통나무를 바로 가져와 쓰기 보단, 오랜 시간 저장하면서 수분을 날려버리고 쓰는 게 좋으며, 불을 붙일 땐 불쏘시개를 활용하여 어느정도 장시간 불에 노출시켜야 비로소 불이 붙는다.</p>
+                  </li>
+                  <li>
+                    <p><span style ="color: rgb(186, 148, 9); font-weight: 700;">볼록렌즈</span></p>
+                    <p>안경이나 망원경, 카메라 등을 입수하고 살펴봤을 때 렌즈가 볼록렌즈일 경우 햇빛을 모아 불을 피울 수 있다. 그냥 햇빛을 한 초점으로 모으기만 하면 연기가 나며 불이 붙는다.</p>
+                    <p>하지만 렌즈가 없다면, 투명하거나 하얀 비닐에 물을 담아 물을 이용한 간이 볼록렌즈를 만들어 활용할 수 있다.</p>
+                  </li>
+                  <li>
+                    <p><span style ="color: rgb(186, 148, 9); font-weight: 700;">부싯돌과 부시</span></p>
+                    <p>철기 시대부터 사용해온 전통적인 점화 도구인 부싯돌과 부시는 철을 부싯돌에 부딪히면 금속 부스러기가 날리면서 순간적으로 공기 접촉면적이 커지면서 산화되는데, 이 과정에서 산화열이 발생해 마찰력으로 인해 불똥이 튄다.</p>
+                    <p>
+                      현대 판매되고 있는 부시는 연습만 한다면 불이 잘 붙지만, 무인도에서 원초적으로 구한 부시는 불이 잘 붙지 않을 수 있다는 단점이 있다.
+                    </p>
+                  </li>
+            </ul>
+            <div class=viedo__media>
+              <p align= "middle"><iframe width="560" height="315" src="https://www.youtube.com/embed/p9WDo0ezofI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <div class=align><p>↑ 불 붙이는 법 더 자세히 알아보기 ↑</p></div>
+          </div>
+        </section>
+        <section id="section4">
+          <div class="wrapper">
+            <h2><span style ="color: rgb(24, 186, 9)">STEP 3. 식수 구하기</span></h2>
+            <p>
+              <p><span style ="color: rgb(255, 213, 0)"> 누구나 아는 상식이겠지만, 아무리 목마르더라도 바닷물은 절대 들이키면 안 된다!</span></p> 
+              <p>바닷물을 마시면 삼투 현상으로 인해 그보다 더 많은 물이 체외로 배출되고, 바닷물에 섞인 염류와 각종 오염물질들은 구토와 설사를 유발하여 결과적으로 더 극심한 갈증을 유발한다.</p> 
+              <p>사방이 물 천지인 무인도에서 심각한 갈증을 느끼다 보면 순간적인 판단력을 잃기 쉽고, 잠깐의 목마름을 해소하기 위해 목숨을 맞바꾸는 선택을 할 수도 있으니 주의해야 한다.</p>
+              <p>식수를 구하기 위해 도움이 되는 것들은 다음과 같다.</p>
+              <ul>
+                <li>
+                    <p><span style ="color: rgb(186, 148, 9); font-weight: 700;">나뭇잎</span></p>
+                    <p>비가 내릴 때 빗물을 자원으로 활용할 수 있기 때문에 큰 나뭇잎을 활용하는 것도 방법이다.</p>
+                    <p>빗물을 마실 수 있나? 싶겠지만 바닷물보단 낫다.</p>
+                  </li>
+                  <li>
+                    <p><span style ="color: rgb(186, 148, 9); font-weight: 700;">비닐</span></p>
+                    <p>밀려온 플라스틱 쓰레기를 활용해 식수를 구할 수도 있다.</p>
+                    <p>바닷물을 비닐 위에 살짝 넣고 비닐을 덮으면 바닷물이 증발되며 생긴 습기인 이슬을 식수로 사용할 수 있다. 비닐을 덮을 땐 돌을 비닐 가장자리에 둘러쌓으면 된다.
+                      </p>
+                  </li>
+                  <li>
+                    <p><span style ="color: rgb(186, 148, 9); font-weight: 700;">수증기</span></p>
+                    <p>땅을 파서 그 가운데 물을 모을 수 있는 통을 넣고 통 주위에 바닷물을 부어준다.</p>
+                    <p>비닐을 덮어주고 가운데 돌이나 무거운 것을 올려 두면 물이 고여 통에 식수가 모이게 된다.</p>
+                  </li>
+            </ul>
+            <img src="img/water.jpg">
+            <div class="hard"> <p><span style="font-size: 16px;">무인도에서는 물 한 모금도 마시기가 정말 힘들다. 물의 소중함을 잊지 말자.</span> </p> </div>
+          </div>
+        </section>
+        <section id="section5">
+          <div class="wrapper">
+            <h2><span style ="color: rgb(24, 186, 9)">STEP 4. 식량 구하기</span></h2>
+            <p>
+              생존하기 위해서는 먹어야 하고, 찾아내야만 한다! 
+            </p>
+            <p>아래 음식들 중 먹어도 안전한 음식은 무엇일까? </p>
+            <!-- 카드시작 -->
+            <div id="section1" class="section">
+              <div class="container">
+                <div class="wrapper">
+                  <div class="card">
+                    <img
+                      class="card__img"
+                      src="img/mushroom.jpg"
+                    />
+                    <div class="card__text">
+                      <h3>아주 먹음직스럽고 예쁘게 생긴 버섯</h3>
+                      <p>
+                        버섯은 몸에도 좋다고 하던데... 예쁘게 생기기까지 했네? 먹어도 괜찮겠지?
+                      </p>
+                    </div>
+                    <div class="card__buttons">
+                      <div class="button">
+                        <button onclick="alert('야생버섯은 익혀 먹어도 위험하다! 야생에서 채취한 버섯은 가급적 섭취하지 않는 것이 좋다. 위험하다!');">선택하기</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img
+                      class="card__img"
+                      src="img/fruit.jpg"
+                    />
+                    <div class="card__text">
+                      <h3>달콤하고 과육이 많아보이는 과일</h3>
+                      <p>
+                        어? 과일이다! 맛있겠다... 나무에서 나는 과일은 안전하지 않을까?
+                      </p>
+                    </div>
+                    <div class="card__buttons">
+                      <div class="button">
+                        <button onclick="alert('야생 과일은 모 아니면 도다. 잘못 먹다간 배탈이 날 확률이 높다. 위험하다!');">선택하기</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img
+                      class="card__img"
+                      src="img/fish.jpg"
+                    />
+                    <div class="card__text">
+                      <h3>싱싱하게 살아있는 맛있는 생선</h3>
+                      <p>
+                        단백질이 섭취하고 싶다... 고기는 없으니 생선이라도 잡아 먹을까?
+                      </p>
+                    </div>
+                    <div class="card__buttons">
+                      <div class="button">
+                        <button onclick="alert('나무를 뾰족하게 만들어 잡거나 무거운 돌을 떨어뜨려 생선을 잡아 먹자. 안전하다!');">선택하기</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 카드 끝 -->
+          </div>
+        </section>
+        <section id="section6">
+          <div class="wrapper">
+            <h2><span style ="color: rgb(24, 186, 9)">STEP 5. 긍정적인 태도 유지하기</span></h2>
+            <p>
+              <p>무인도에서 살아남는 것은 정말 스트레스와 불안의 연속일 것이다.</p> 
+              <p>하지만 긍정적인 태도를 유지하지 않으면, 살아남기 어려울 수도 있다. </p>
+              <p>언제나 탈출할 수 있다는 가능성이 있다는 것을 잊지 마라.</p>
+            </p>
+          </div>
+        </section>
+        <section id="section7">
+          <div class="wrapper">
+            <h2><span style ="color: rgb(24, 186, 9)">STEP 6. SOS 요청하기</span></h2>
+            <p>
+              <p>1분 1초라도 더 빨리 탈출하길 원하는 당신, 이제 실천해보자!</p>
+              <p>가장 화려하고 형형색색의 도구를 활용해 구조 요청 시 활용하거나, 거울이나 손전등을 이용해 빛을 반사시켜 구조 요청을 할 수도 있다.</p> 
+              <p>혹은 바위나 나뭇가지를 사용해 지상에 SOS 신호를 만들 수 있다. 하지만 이 경우 그걸 관측할 수 있는 인접 비행중인 수색 항공기에 대해서만 효과가 있지만, 가장 효과적인 방법이긴 하다.</p>
+              <img src="img/sos (2).jpg">
+            </p>
+          </div>
+        </section>
+      </main>
+      <aside>
+        <h2 class="hide">links to each pages</h2>
+        <ol>
+          <a href="#section1">
+            <li>Prologue</li>
+          </a>
+          <a href="#section2">
+            <li>Step1</li>
+          </a>
+          <a href="#section3"> 
+            <li>Step2</li></a>
+
+          <a href="#section4">
+            <li>Step3</li>
+          </a>
+          <a href="#section5">
+            <li>Step4</li>
+          </a>
+          <a href="#section6">
+            <li>Step5</li>
+          </a>
+          <a href="#section7">
+            <li>Step6</li>
+          </a>
+        </ol>
+      </aside>
+      <div class="progressBar">
+        <div class="indicator"></div>
+      </div>
+    </div>
+    <footer>
+      <div class="wrapper">
+        <div class="content animTarget">
+        <h2>과연 탈출할 수 있을까?</h2>
+        <p>
+          <!-- <button>눌러보세요!</button> -->
+          <button type="button" class="hover">
+            <div class="hidden-hover">마우스를 올려보세요!</div>
+            <div class="show-hover">희망을 가지세요!</div>
+          </button>
+          
+        </p>
+      </div>
+      </div>
+    </footer>
+  </body>
+</html>

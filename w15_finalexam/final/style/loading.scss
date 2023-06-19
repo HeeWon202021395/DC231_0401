@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+section:nth-child(even) {
+  background-color: dimgrey;
+}
+
+.wrapper {
+  width: min(60ch, 100% - 4rem);
+  //   60ch는 최대 가로 글자값 60글자라고
+  margin-inline: auto;
+  min-height: max(800px, 100dvh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  border: 1px solid red;
+}
+
+// #section1 {
+//   .animTarget {
+//     transform: scale();
+//   }
+// }
+
+#section2 {
+  .animTarget {
+    transform: scale(0);
+    transition: transform 500ms ease-out;
+  }
+  &.triggered {
+    .animTarget {
+      transform: scale(1);
+    }
+  }
+}

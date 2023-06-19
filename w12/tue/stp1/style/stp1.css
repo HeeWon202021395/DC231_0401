@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  /* 보더박스가 기본형이니 그렇게해라,, */
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  /* 서체는 바디에 보통 쓰면 모든 요소들이 다 하위에도 적용된다. 폰트사이즈는 18pt 굿 */
+  font-family: system-ui;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  /* 한글은 1.6정도 쓰고 영어는 1.5정도,, 글자가 커질수록 값은 좀 더 줄여야함 */
+  margin: 0;
+}
+
+main {
+  margin-inline: auto;
+  /* padding-inline: 2rem; */
+  /* max-width: 70ch; */
+  /* vh나 vw는 화면에 따라 달라지는 값,,? ch란, 내가 고른 서체 사이즈를 기준으로 대충 몇 글자 들어갈 수 있는 너비를 설정하는 것. 60-80ch정도가 적당~  */
+  width: min(70ch, 100% - 2 * 32px);
+  /* min은 css에 적용되는 함수. 뒤에 값에 있는 친구는 계속 값이 바뀌는데, 그에 따른,,,값을 적용하려고,,^^? */
+}
+
+img,
+svg,
+video,
+iframe {
+  display: block;
+  /* 이건 이미지랑 글자 사이의 마진을 없애는 방법. 여기에 마진 0값 같이 주면 완전 붙는다 */
+  max-width: 100%;
+}

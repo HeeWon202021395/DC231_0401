@@ -1,0 +1,227 @@
+@import "theme.dark.css"
+  (prefers-color-scheme: dark);
+@import "theme.light.css"
+  (prefers-color-scheme: light);
+
+$min-height: 2rem;
+$progressBar-height: 1rem;
+$wrapper-padding-inline: 2rem;
+
+$bg: var(--bg);
+$bgVariant: var(--bgVariant);
+$txt: var(--txt);
+$surface-transparent: var(--surface-transparent);
+// 위에 스티키래퍼한테 주는 값
+$surface: var(--surface);
+// 인디케이터바 뒷부분
+$onSurface: var(--onSurface);
+// surface위에 넣는 색
+$accent: var(--accent);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+html {
+  color-scheme: light dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  background-color: $bg;
+  color: $txt;
+}
+
+.wrapper {
+  max-width: calc(80ch + 2 * 2rem);
+  margin-inline: auto;
+  padding-inline: $wrapper-padding-inline;
+  justify-content: center;
+  min-height: max(50dvh, $min-height);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  // text-wrap: balance;
+  //   아주 유용한 기능!
+  word-break: keep-all;
+}
+
+// https://lalacode.tistory.com/6 요기 참고하면 nth차이들 볼 수 있음~
+section:nth-of-type(odd) {
+  background-color: $bgVariant;
+}
+
+.stickyWrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: fit-content(0) 1fr;
+  //   1fr는 최소사이즈
+  grid-template-rows: 1fr;
+}
+
+main {
+  grid-column: 1 / span 2;
+  // 가로값, 아래는 세로값
+  grid-row: 1;
+  z-index: 1;
+}
+
+aside {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  grid-row: 1;
+  grid-column: 1;
+  width: fit-content;
+  padding-inline: 16px 24px;
+  background-color: $surface-transparent;
+  backdrop-filter: blur(4px);
+  height: max(100dvh, $min-height);
+  border-radius: 0 16px 16px 0;
+  font-size: 14px;
+
+  ol {
+    margin: 0;
+    list-style: none;
+    // 이거 숫자 없애는거
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+
+    li {
+      font-weight: 600;
+      text-transform: capitalize;
+      color: $onSurface;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: color 150ms ease-out;
+
+      &::before {
+        content: "";
+        margin-top: 2.5px;
+        width: 16px;
+        height: 16px;
+        border-radius: 999999999px;
+        border: 2px solid $onSurface;
+        transition: border-color 150ms ease-out;
+      }
+      &:hover {
+        color: $accent;
+
+        &::before {
+          border-color: $accent;
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.progressBar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: $progressBar-height;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  background-color: $surface;
+
+  .indicator {
+    position: absolute;
+    inset: 0;
+    transform-origin: left;
+    // transform: scaleX(50%);
+    background-color: $accent;
+  }
+}
+
+footer {
+  .wrapper {
+    min-height: max(100dvh, $min-height);
+  }
+}
+
+// 사이즈같은 경우 다른 값들이랑 중첩되는 것보단 따로 맨아래에 미디어로 빼놓는게 좋다. 교수님은 1080에서 화면이 바뀌는걸로 설정해두셨당
+
+@media (width < 1080px) {
+  .stickyWrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+  }
+
+  main {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  aside {
+    top: $progressBar-height;
+    grid-row: 3;
+    grid-column: 1;
+    width: 100%;
+    height: fit-content;
+    border-radius: 0 0 16px 16px;
+    padding-inline: unset;
+    padding-block: 16px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    ol {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 32px;
+    }
+  }
+  .progressBar {
+    grid-column: 1;
+    grid-row: 1;
+
+    .indicator {
+      position: absolute;
+      inset: 0;
+      transform-origin: left;
+      // transform: scaleX(50%);
+      background-color: $accent;
+    }
+  }
+}
+
+@media (width < 947.2px) {
+  aside {
+    ol {
+      justify-content: flex-start;
+
+      a:first-of-type li {
+        margin-left: $wrapper-padding-inline;
+      }
+      a:last-of-type li {
+        margin-right: $wrapper-padding-inline;
+      }
+    }
+  }
+}

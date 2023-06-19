@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin-inline: auto;
+    max-width: 60rem;
+    padding-inline: 1.5rem;
+    background-color: bisque;
+    position: relative;
+}
+
+.wrapper {
+    padding-block: 2rem;
+    background-color: burlywood;
+}
+
+#section1 {
+    .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    }
+}
+
+.square {
+    width: 12.5rem;
+    aspect-ratio: 1 / 1;
+    &:nth-of-type(1) {
+        background-color: red;
+    }
+    width: 12.5rem;
+    aspect-ratio: 1 / 1;
+    &:nth-of-type(2) {
+        // position: fixed;
+        // 포지션이 static기본값이 되고, relative는 나 다른 곳좀 이동할게~ 하고 자기 자리는 유지하되 자기는 다른데로 가는 것이다. 
+        // absolute는 자기 자리 차지 유지하지 않고 다른데로 가는 것이다. 
+        top: 10px
+        left: 50px
+        background-color: blue;
+    }
+    width: 12.5rem;
+    aspect-ratio: 1 / 1;
+    &:nth-of-type(3) {
+        background-color: greenyellow;
+    }
+    #section2 {
+    height: 200fs;
+    position: sticky;
+    top: 50px
+    }
+    #section3 {
+
+    }
+}

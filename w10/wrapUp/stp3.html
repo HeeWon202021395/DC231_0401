@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W10 - stp3 변수선언과 변수조작</title>
+    <script>
+        // 변수란, 컴퓨터에게 내가 나중에 써먹을 수 있게 값을 저장해 놓으라고 하는 것이다.
+        // 언제든지 우리가 이름 붙인 그 변수를 통해 값 혹은 데이터를 불러올 수 있다. 
+        // 변수 옛날문법 - var 변수이름;
+        // 변수 요즘문법 - let 변수이름;
+        let a = 1;
+        console.log(a); //1
+        a = 2;
+        // 코딩에서 =의 의미는 같다라는 의미가 아니라, 좌변에 있는 것을 우변에 있는 것에 할당한다(assign) 라는 의미이다. 
+        // 코딩에서는 그래서 교환법칙이 안 된다. (좌변하고 우변하고 바꾸면 똑같지 않다.)
+        console.log(a); //2
+        a = a+1;
+        console.log(a); //3
+        a++;
+        console.log(a); //4
+        a +=1;
+        console.log(a); //5
+        let txt = "글자를 넣어보자";
+        console.log(txt); //글자를 넣어보자
+        txt +=1;
+        console.log(txt); //글자를 넣어보자1
+        txt = txt + 1;
+        console.log(txt); //글자를 넣어보자11
+        txt += "텍스트";
+        console.log(txt); //글자를 넣어보자11텍스트
+        //txt++; 는 안된다. (들어있는게 숫자가 아니라서)
+        let numTxt = "1";
+        console.log(numTxt); //1
+        numTxt++; //되면 안되는건데 된다. JS의 장점이자 단점~
+        console.log(numTxt); //2
+
+        a = a - 1;
+        console.log(a); //4
+        a = a*10;
+        console.log(a); //40
+        a--;
+        console.log(a); //39
+        a /=3;
+        console.log(a); //13
+    </script>
+</head>
+<body>
+    <h2>조승연콘 가고싶다...개슬프네</h2>
+    <style>
+        h2 {
+            color:orange;
+        }
+    </style>
+</body>
+</html>

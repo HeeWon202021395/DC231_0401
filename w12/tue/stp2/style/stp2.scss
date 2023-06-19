@@ -1,0 +1,70 @@
+// 이번껀 실패야!! 아저씨꺼 보고 새로 실습파일 만들어야지...
+*,
+*::after,
+*::before {
+  box-sizing: border;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  font-family: system-ui;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 70ch;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  background-color: aqua;
+}
+
+.site-title {
+  text-align: center;
+  font-size: 3rem;
+}
+
+section {
+  padding-block: 5rem;
+}
+
+.section-title {
+  font-size: 36px;
+}
+// & nth-child(odd) {
+//   background-color: darkgrey;
+// }
+& :nth-of-type(odd) {
+  background-color: darkgray;
+}
+// nth of type는 섹션 중 몇 번째를 칭하는 것이고, nth child는 부모로부터 몇 번째 자식인지에 따라 odd는 홀수,,,에??
+
+.diagonal {
+  position: relative;
+  // background: linear-gradient(
+  //   45deg in oklab,
+  //   oklch(80% 0.5 340) 0%,
+  //   oklch(80% 0.5 200) 100%
+  // );
+  isolation: isolate;
+  background-color: darkgray;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: linear-gradient(
+      45deg in oklab,
+      oklch(80% 0.5 340) 0%,
+      oklch(80% 0.5 200) 100%
+    );
+    inset: 0;
+    transform: skew(-5deg);
+    // 이건 5도를 기울이는 것
+    z-index: -1;
+    // 뒤로 보내고 isolate를 하면 빨강을 뒤로 보내고 글자는 올라오고..~?
+  }
+}

@@ -1,0 +1,194 @@
+@import "theme.dark.css" (prefers-color-scheme: dark);
+@import "theme.light.css" (prefers-color-scheme: light);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+html {
+  color-scheme: light dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  background-color: var(--bg);
+  color: var(--txt);
+}
+
+.wrapper {
+  max-width: calc(80ch + 4rem);
+  margin-inline: auto;
+  padding-inline: 2rem;
+  justify-content: center;
+  min-height: max(50dvh, 2rem);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  word-break: keep-all;
+}
+
+section:nth-of-type(odd) {
+  background-color: var(--bgVariant);
+}
+
+.stickyWrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: fit-content(0) 1fr;
+  grid-template-rows: 1fr;
+}
+
+main {
+  grid-column: 1/span 2;
+  grid-row: 1;
+  z-index: 1;
+}
+
+aside {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  grid-row: 1;
+  grid-column: 1;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-inline: 16px 24px;
+  background-color: var(--surface-transparent);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  height: max(100dvh, 2rem);
+  border-radius: 0 16px 16px 0;
+  font-size: 14px;
+}
+aside ol {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+aside ol li {
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--onSurface);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: color 150ms ease-out;
+}
+aside ol li::before {
+  content: "";
+  margin-top: 2.5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 999999999px;
+  border: 2px solid var(--onSurface);
+  transition: border-color 150ms ease-out, background-color 150ms ease-out;
+}
+aside ol li:hover {
+  color: var(--accent);
+}
+aside ol li:hover::before {
+  border-color: var(--accent);
+}
+aside ol li.pressed {
+  border-color: var(--accent);
+}
+aside ol li.pressed::before {
+  border-color: var(--accent);
+  background-color: var(--accent);
+}
+aside ol a {
+  text-decoration: none;
+}
+
+.progressBar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 1rem;
+  grid-column: 1/span 2;
+  grid-row: 1;
+  background-color: var(--surface);
+}
+.progressBar .indicator {
+  position: absolute;
+  inset: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  background-color: var(--accent);
+}
+
+footer .wrapper {
+  min-height: max(100dvh, 2rem);
+}
+
+@media (width < 1080px) {
+  .stickyWrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+  }
+  main {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  aside {
+    top: 1rem;
+    grid-row: 3;
+    grid-column: 1;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-radius: 0 0 16px 16px;
+    padding-inline: unset;
+    padding-block: 16px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  aside::-webkit-scrollbar {
+    display: none;
+  }
+  aside ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+  }
+  .progressBar {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .progressBar .indicator {
+    position: absolute;
+    inset: 0;
+    transform-origin: left;
+    background-color: var(--accent);
+  }
+}
+@media (width < 947.2px) {
+  aside ol {
+    justify-content: flex-start;
+  }
+  aside ol a:first-of-type li {
+    margin-left: 2rem;
+  }
+  aside ol a:last-of-type li {
+    margin-right: 2rem;
+  }
+}
