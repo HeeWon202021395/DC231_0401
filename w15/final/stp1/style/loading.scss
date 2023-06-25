@@ -56,9 +56,6 @@ section {
   object-fit: cover;
   filter: brightness(90%);
 }
-// .content {
-//   border: 1px solid red;
-// }
 
 #section1 {
   .content.animTarget {
@@ -114,7 +111,7 @@ section {
   }
   &.triggered {
     .content.animTarget {
-      animation: changeWordColor 4s linear
+      animation: changeWordColor 3s linear
         infinite;
     }
     p.animTarget {
@@ -124,14 +121,52 @@ section {
 
   @keyframes changeWordColor {
     25% {
-      color: rgb(100, 96, 95);
+      color: rgb(129, 126, 126);
     }
     50% {
       color: rgb(100, 56, 136);
     }
     75% {
-      color: #a89dab;
+      color: #c1a2c9;
     }
+  }
+}
+
+.thinking span {
+  display: inline-block;
+  margin: 0 -0.075em;
+  animation: thinking 0.7s infinite alternate;
+}
+.thinking span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.thinking span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.thinking span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.thinking span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.thinking span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.thinking span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.thinking span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.thinking span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+@keyframes thinking {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
   }
 }
 

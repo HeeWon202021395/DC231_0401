@@ -19,7 +19,7 @@ body {
   margin: 0;
   background-color: var(--bg);
   color: var(--txt);
-  font-family: system-ui;
+  font-family: "Hahmlet", serif;
   font-size: 18px;
   line-height: 1.6;
 }
@@ -167,6 +167,37 @@ section:nth-of-type(odd) {
   margin: 8px 8px 8px 8px;
   text-align: center;
 }
+#section4 .center {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#section4 .slider {
+  width: 800px;
+  height: 500px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  background-size: contain;
+  background: url(water1.jpg);
+  animation: slide 10s infinite;
+}
+@keyframes slide {
+  0% {
+    background: url(water1.jpg);
+  }
+  25% {
+    background: url(water1.jpg);
+  }
+  50% {
+    background: url(water2.jpg);
+  }
+  75% {
+    background: url(water3.jpg);
+  }
+  100% {
+    background: url(water4.jpg);
+  }
+}
 
 #section5 img {
   display: block;
@@ -298,7 +329,7 @@ main {
   width: 100%;
   height: 800px;
   vertical-align: middle;
-  filter: brightness(50%);
+  filter: brightness(40%);
 }
 
 .cover-text {
